@@ -5,14 +5,14 @@
  * Date: 8/13/2016
  * Time: 8:22 AM
  */
-namespace Smoqadam\JS;
+namespace Smoqadam\Js;
 
 use stdClass;
 use yii\base\Component;
 use yii\helpers\Json;
 use yii\web\View;
 
-class JS extends Component
+class Js extends Component
 {
     /**
      * The namespace to nest JS vars under.
