@@ -6,7 +6,7 @@ ported from http://github.com/laracasts/PHP-Vars-To-Js-Transformer
 
 ## How to use 
 
-Put JS.php in `components` directory
+Put `Js.php` in `components` directory
 
 and use it like this : 
 
