@@ -15,6 +15,12 @@ use yii\web\View;
 class Js extends Component
 {
     /**
+     * Position in the page
+     *
+     * @var int|string
+     */
+    public $pos;
+    /**
      * The namespace to nest JS vars under.
      *
      * @var string
@@ -39,9 +45,10 @@ class Js extends Component
      *
      * @param string $namespace
      */
-    public function __construct($namespace = 'window')
+    public function __construct($namespace = 'window', $pos = View::POS_HEAD)
     {
         $this->namespace = $namespace;
+        $this->pos = $pos;
     }
 
     /**
@@ -63,7 +70,7 @@ class Js extends Component
         $js = $this->buildJavaScriptSyntax($variables);
         // And then we'll actually bind those
         // variables to the view.
-        \Yii::$app->view->registerJs($js, View::POS_BEGIN);
+        \Yii::$app->view->registerJs($js, $this->pos);
         return $js;
     }
 
